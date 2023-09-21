@@ -93,7 +93,7 @@ const Index = () => {
                 label:  <Link to="/products">Products</Link>
               },{
                 key:'logout',
-                icon: <HiOutlineLogout className="text-[#EB5756] font-bold"/>,
+                icon: <HiOutlineLogout className="text-[#EB5756] font-bold" onClick={handleLogOut}/>,
                 className:"bg-[#FBDDDD]",
                 label: <p className="text-[#EB5756] font-bold" onClick={handleLogOut}>Logout</p>
               }

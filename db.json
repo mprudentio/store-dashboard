@@ -1,0 +1,176 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "OBH Combi Anak",
+      "category": "Obat Batuk Anak",
+      "price": 20000,
+      "stock": 10
+    },
+    {
+      "name": "OBH Combi",
+      "category": "Obat Batuk",
+      "price": "36000",
+      "stock": 16,
+      "id": 3
+    },
+    {
+      "name": "Mylanta",
+      "category": "Obat Maag",
+      "price": "41000",
+      "stock": 120,
+      "id": 4
+    },
+    {
+      "name": "Sangobion",
+      "category": "Obat Darah Rendah",
+      "price": "17000",
+      "stock": 17,
+      "id": 5
+    },
+    {
+      "name": "Curcumin",
+      "category": "Vitamin",
+      "price": "20000",
+      "stock": 6,
+      "id": 7
+    },
+    {
+      "name": "Sakatonik ABC",
+      "category": "Vitamin",
+      "price": "30000",
+      "stock": 3,
+      "id": 8
+    }
+  ],
+  "sales": [
+    {
+      "date": "19/09/2023",
+      "price": "Rp 20000",
+      "products": [
+        {
+          "name": "Curcumin",
+          "quantity": 1,
+          "price": "Rp 20000"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "date": "19/09/2023",
+      "price": "Rp 40000",
+      "products": [
+        {
+          "name": "Curcumin",
+          "quantity": 2,
+          "price": "Rp 40000"
+        }
+      ],
+      "id": 10
+    },
+    {
+      "date": "19/09/2023",
+      "price": "Rp 51000",
+      "products": [
+        {
+          "name": "Sangobion",
+          "quantity": 3,
+          "price": "Rp 51000"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "date": "20/09/2023",
+      "price": "Rp 194000",
+      "products": [
+        {
+          "name": "Mylanta",
+          "quantity": 4,
+          "price": "Rp 164000"
+        },
+        {
+          "name": "Kalpanax Krim",
+          "quantity": 2,
+          "price": "Rp 30000"
+        }
+      ],
+      "id": 12
+    },
+    {
+      "date": "18/09/2023",
+      "price": "Rp 60000",
+      "products": [
+        {
+          "name": "Sakatonik ABC",
+          "quantity": 2,
+          "price": "Rp 60000"
+        }
+      ],
+      "id": 13
+    },
+    {
+      "date": "17/09/2023",
+      "price": "Rp 80000",
+      "products": [
+        {
+          "name": "Curcumin",
+          "quantity": 1,
+          "price": "Rp 20000"
+        },
+        {
+          "name": "Sakatonik ABC",
+          "quantity": 2,
+          "price": "Rp 60000"
+        }
+      ],
+      "id": 14
+    },
+    {
+      "date": "16/09/2023",
+      "price": "Rp 72000",
+      "products": [
+        {
+          "name": "OBH Combi",
+          "quantity": 2,
+          "price": "Rp 72000"
+        }
+      ],
+      "id": 15
+    },
+    {
+      "date": "09/02/2023",
+      "price": "Rp 37000",
+      "products": [
+        {
+          "name": "Sangobion",
+          "quantity": 1,
+          "price": "Rp 17000"
+        },
+        {
+          "name": "OBH Combi Anak",
+          "quantity": 1,
+          "price": "Rp 20000"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "date": "20/09/2023",
+      "price": "Rp 74000",
+      "products": [
+        {
+          "name": "Sangobion",
+          "quantity": 2,
+          "price": "Rp 34000"
+        },
+        {
+          "name": "OBH Combi Anak",
+          "quantity": 2,
+          "price": "Rp 40000"
+        }
+      ],
+      "id": 17
+    }
+  ]
+}

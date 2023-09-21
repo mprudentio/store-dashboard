@@ -131,7 +131,7 @@ const Register = () => {
           
           <Form.Item>
               <ReCAPTCHA
-                  sitekey="6Ld5dSQoAAAAAL45Wl6fqYNzARLBp1iVwLYLI0J4"
+                  sitekey={import.meta.env.VITE_RECAPCTHA_SITE_KEY}
                   onChange={handleRecaptcha}
               />
           </Form.Item>

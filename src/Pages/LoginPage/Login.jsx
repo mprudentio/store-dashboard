@@ -41,6 +41,15 @@ const LoginPage = () => {
           });
         })
     }
+
+    // useEffect(() => {
+    //   const user = auth.currentUser;
+  
+    //   // If a user is already logged in, redirect to the dashboard
+    //   if (user) {
+    //     navigate('/dashboard');
+    //   }
+    // }, [navigate]);
   return (
     <div>
       <Row className='font-poppins'>
@@ -61,7 +70,7 @@ const LoginPage = () => {
             autoComplete="off"
           >
             <div className="mb-5">
-                <p className='text-poppins text-4xl text-primary-green font-extrabold mb-1'>Sign in</p>
+                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold mb-1'>Sign in</p>
                 <p className='text-sm font-poppins'>Do not have an account? <Link to='/register' className='hover:text-primary-green'><span>Register here</span></Link></p>
            </div>
             <div className=''>

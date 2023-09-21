@@ -42,6 +42,8 @@ const Register = () => {
     const handleRecaptcha = () =>{
       setVerified(!verified)
     }
+
+
     return (
       <div>
         <Row>
@@ -58,7 +60,7 @@ const Register = () => {
             >
 
               <div>
-                <p className='text-poppins text-4xl text-primary-green font-extrabold'>Create an account</p>
+                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold'>Create an account</p>
                 <div className='flex gap-2 mt-10'>
                   <FaUserAlt size={14} className='mt-1'/>
                   <label htmlFor="email" className='font-poppins text-md'>Email </label>
@@ -129,7 +131,7 @@ const Register = () => {
           
           <Form.Item>
               <ReCAPTCHA
-                  sitekey={import.meta.env.VITE_RECAPCTHA_SITE_KEY}
+                  sitekey="6Ld5dSQoAAAAAL45Wl6fqYNzARLBp1iVwLYLI0J4"
                   onChange={handleRecaptcha}
               />
           </Form.Item>

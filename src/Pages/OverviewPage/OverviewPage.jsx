@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import dayjs from "dayjs"
 import { getProducts } from "../Stocks/productSlice"
 import { getRevenue } from "../RevenuePage/revenueSlice"
-import { Card } from "antd"
+import { Card,Spin } from "antd"
 import {MdLocalPharmacy} from "react-icons/md"
 import {FaSackDollar} from 'react-icons/fa6'
 import {TbCategory} from 'react-icons/tb'
@@ -158,7 +158,8 @@ for (const [productName, quantity] of productQuantities) {
           
         </Card>
       </div>
-      <Card className="mt-3">
+      {productsData.loading &&  <div className="w-full flex flex-col justify-center items-center pt-10"><Spin tip="Loading Chart and Data" size="small"/> <p>Loading Data...</p> </div>}
+      {!productsData.loading && <Card className="mt-3">
         <p className="font-poppins text-lg mb-2 font-bold">Revenue by Date</p>
         <ResponsiveContainer width="100%" height={380}>
           <LineChart className="w-full h-full" data={dataLineChart} >
@@ -170,7 +171,7 @@ for (const [productName, quantity] of productQuantities) {
             <Line type="monotone" dataKey="price" stroke="#00A32E" />
           </LineChart>
         </ResponsiveContainer>
-      </Card>
+      </Card>}
     </div>
   )
 }

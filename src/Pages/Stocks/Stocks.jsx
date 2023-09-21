@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Button, Table,Typography, Modal, Form, Input,InputNumber } from 'antd';
+import { Button, Table, Modal, Form, Input,InputNumber } from 'antd';
 import { useDispatch, useSelector } from "react-redux"
 import {AiOutlinePlus} from 'react-icons/ai'
 import { getProducts, createProducts, updateProducts, deleteProduct } from "./productSlice"
@@ -39,8 +39,8 @@ const Stocks = () => {
       key:'action',
       render:(text,record)=>(
         <div className="flex gap-1">
-          <Typography.Text className="" onClick={() => {handleEditButton(record)}}>Edit</Typography.Text>
-          <p onClick={()=>handleDeletProduct(record)}>Delete</p>
+          <Button type="primary" className="bg-primary-green"  onClick={() => {handleEditButton(record)}}>Edit</Button>
+          <Button  type="primary" danger  onClick={()=>handleDeletProduct(record)}>Delete</Button>
         </div>
       )
     }

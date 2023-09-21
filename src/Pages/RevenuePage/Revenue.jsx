@@ -57,8 +57,8 @@ const Revenue = () => {
       key:'action',
       render:(text,record)=>(
         <div className="flex gap-1">
-          <p className="" onClick={() => handleEdit(record)}>Edit</p>
-          <p onClick={()=>handleDeletProduct(record)}>Delete</p>
+          <Button type="primary" className="bg-primary-green" onClick={() => handleEdit(record)}>Edit</Button>
+          <Button type="primary" danger onClick={()=>handleDeletProduct(record)}>Delete</Button>
         </div>
       )
     }
@@ -133,7 +133,7 @@ const addProductItem = () => {
   useEffect(()=>{
    fetchRevenueData()
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[dispatch])
 
   const calculatePrice = (quantity, productName) => {
     const product = dataProducts.products.find(product => product.name === productName);

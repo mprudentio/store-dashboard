@@ -57,7 +57,7 @@ const ForgotPassword = () => {
             autoComplete="off"
           >
             <div className="mb-5">
-                <p className='text-poppins text-4xl text-primary-green font-extrabold mb-1'>Forgot Password?</p>
+                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold mb-1'>Forgot Password?</p>
                 <p className='text-sm font-poppins'>Enter the email address associated with your account and we&apos;ll send you a link to change your password </p>
            </div>
             <div className=''>

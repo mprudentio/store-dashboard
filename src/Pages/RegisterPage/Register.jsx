@@ -47,11 +47,11 @@ const Register = () => {
     return (
       <div>
         <Row>
-          <Col md={12} className='bg-gradient-to-r flex flex-col justify-center items-center h-screen from-emerald-500 to-emerald-900 w-screen md:bg-none'>
+          <Col md={12} className='bg-gradient-to-r flex flex-col justify-center items-center md:p-0 from-emerald-500 to-emerald-900 w-screen md:bg-none'>
             <Form
               name="basic"
               layout='vertical'
-              className='max-w-[450px] w-full mx-auto p-4'
+              className='max-w-[450px] w-full mx-auto p-2 md:p-4'
               initialValues={{
                 remember: true,
               }}

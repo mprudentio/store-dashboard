@@ -3,7 +3,7 @@ import { auth } from '../../../firebaseConfig'
 import { sendPasswordResetEmail } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
-import coba from '../../img/ForgotPassword.svg'
+import coba from '../../img/forgotPassword.svg'
 import {Form, Row, Col,Input, Button} from 'antd'
 
 const ForgotPassword = () => {

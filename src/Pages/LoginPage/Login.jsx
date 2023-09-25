@@ -37,7 +37,7 @@ const LoginPage = () => {
           Swal.fire({
             icon: 'error',
             title: 'Login Failed',
-            text: error.message
+            text: error.message ==='Firebase: Error (auth/user-not-found).'? 'User not found': "Incorrect Username or Password. Please try again."
           });
         })
     }
@@ -57,7 +57,7 @@ const LoginPage = () => {
           <div className='bg-no-repeat bg-cover bg-center h-screen' style={{ backgroundImage: `url(${loginImage})` }}>
           </div>
         </Col>
-        <Col md={12}  className='bg-gradient-to-r flex flex-col justify-center items-center h-screen from-emerald-500 to-emerald-900 w-screen md:bg-none'>
+        <Col md={12}  className='bg-gradient-to-r flex flex-col justify-center items-center h-screen w-screen'>
           <Form
             name="basic"
             layout='vertical'
@@ -70,7 +70,7 @@ const LoginPage = () => {
             autoComplete="off"
           >
             <div className="mb-5">
-                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold mb-1'>Sign in</p>
+                <p className='text-poppins text-4xl  text-primary-green font-extrabold mb-1'>Sign in</p>
                 <p className='text-sm font-poppins'>Do not have an account? <Link to='/register' className='hover:text-primary-green'><span>Register here</span></Link></p>
            </div>
             <div className=''>
@@ -122,7 +122,7 @@ const LoginPage = () => {
               </Form.Item>
           </div>
           </Form>
-          <Link to='/forgot-password' className='text-white text-xs font-poppins md:text-primary-green hover:text-primary-green'><p>Forgot Password?</p></Link>
+          <Link to='/forgot-password' className='text-xs font-poppins text-primary-green hover:text-primary-green'><p>Forgot Password?</p></Link>
         </Col>
       </Row>
       

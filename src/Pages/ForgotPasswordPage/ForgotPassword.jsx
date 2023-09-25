@@ -9,8 +9,7 @@ import {Form, Row, Col,Input, Button} from 'antd'
 const ForgotPassword = () => {
  const [email,setEmail] = useState('')
  const navigate=useNavigate()
- const handlerSubmit = (e) =>{
-    e.preventDefault()
+ const handlerSubmit = () =>{
     sendPasswordResetEmail(auth,email)
     .then(()=>{
         Swal.fire({
@@ -26,7 +25,7 @@ const ForgotPassword = () => {
         Swal.fire({
             icon: 'error',
             title: 'Password Reset Failed',
-            text: error.message
+            text: error.message==='Firebase: Error (auth/user-not-found).'? "Email Not Found" : error.message
           });
     })
  }
@@ -45,7 +44,7 @@ const ForgotPassword = () => {
             <img src={coba} alt="" className='px-4' />
           </div>
         </Col>
-        <Col md={12}  className='bg-gradient-to-r flex flex-col justify-center items-center h-screen from-emerald-500 to-emerald-900 w-screen md:bg-none'>
+        <Col md={12}  className='bg-gradient-to-r flex flex-col justify-center items-center h-screen w-screen '>
           <Form
             name="basic"
             layout='vertical'
@@ -53,11 +52,10 @@ const ForgotPassword = () => {
             initialValues={{
               remember: true,
             }}
-            onFinish={handlerSubmit}
             autoComplete="off"
           >
             <div className="mb-5">
-                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold mb-1'>Forgot Password?</p>
+                <p className='text-poppins text-4xl text-primary-green font-extrabold mb-1'>Forgot Password?</p>
                 <p className='text-sm font-poppins'>Enter the email address associated with your account and we&apos;ll send you a link to change your password </p>
            </div>
             <div className=''>
@@ -82,7 +80,7 @@ const ForgotPassword = () => {
           <div className='mt-2'>
             <Form.Item 
               >
-                <Button  htmlType="submit" block type='primary' className='bg-primary-green py-6 font-poppins flex items-center justify-center' disabled={!email}>
+                <Button  htmlType="submit" block type='primary' onClick={handlerSubmit} className='bg-primary-green py-6 font-poppins flex items-center justify-center' disabled={!email}>
                   Reset Password
                 </Button>
               </Form.Item>

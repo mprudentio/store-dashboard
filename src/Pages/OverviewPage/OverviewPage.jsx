@@ -158,7 +158,7 @@ for (const [productName, quantity] of productQuantities) {
           
         </Card>
       </div>
-      {productsData.loading &&  <div className="w-full flex flex-col justify-center items-center pt-10"><Spin tip="Loading Chart and Data" size="small"/> <p>Loading Data...</p> </div>}
+      {productsData.loading &&  <div className="w-full flex flex-col justify-center items-center pt-10"><Spin size="small"/> <p>Loading Data...</p> </div>}
       {!productsData.loading && <Card className="mt-3">
         <p className="font-poppins text-lg mb-2 font-bold">Revenue by Date</p>
         <ResponsiveContainer width="100%" height={380}>

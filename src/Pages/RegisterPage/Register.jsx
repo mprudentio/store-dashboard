@@ -16,8 +16,7 @@ const Register = () => {
     const [password,setPassword]=useState('')
     const [confirmPassword,setConfirmPassword]=useState('')
     const navigate=useNavigate()
-    const handleRegister =async (e) =>{
-      e.preventDefault()
+    const handleRegister =async () =>{
       createUserWithEmailAndPassword(auth,email,password)
       .then(() => {
         Swal.fire({
@@ -34,7 +33,7 @@ const Register = () => {
         Swal.fire({
           icon: 'error',
           title: 'Login Failed',
-          text: error.message
+          text: error.message==='Firebase: Password should be at least 6 characters (auth/weak-password).'?"Password should be at least 6 characters":error.message
         });
       })
     }
@@ -47,7 +46,7 @@ const Register = () => {
     return (
       <div>
         <Row>
-          <Col md={12} className='bg-gradient-to-r flex flex-col justify-center items-center md:p-0 from-emerald-500 to-emerald-900 w-screen md:bg-none'>
+          <Col md={12} className='bg-gradient-to-r flex flex-col justify-center items-center md:p-0 w-screen'>
             <Form
               name="basic"
               layout='vertical'
@@ -60,7 +59,7 @@ const Register = () => {
             >
 
               <div>
-                <p className='text-poppins text-4xl text-white md:text-primary-green font-extrabold'>Create an account</p>
+                <p className='text-poppins text-4xl text-primary-green font-extrabold'>Create an account</p>
                 <div className='flex gap-2 mt-10'>
                   <FaUserAlt size={14} className='mt-1'/>
                   <label htmlFor="email" className='font-poppins text-md'>Email </label>

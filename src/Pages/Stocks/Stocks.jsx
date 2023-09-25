@@ -144,7 +144,7 @@ const handleDeletProduct = (product) =>{
       {!loading && error && <p>{error}</p>}
       {!loading && !error && products && 
         <div className="p-4" >
-          <Button type="primary" icon={<AiOutlinePlus/>} size={30} onClick={handleCreateButton} className="bg-primary-green px-4 py-5 text-md font-poppins font-bold flex justify-center items-center mb-3">Tambah</Button>
+          <Button type="primary" icon={<AiOutlinePlus/>} size={30} onClick={handleCreateButton} className="bg-primary-green px-4 py-5 text-md font-poppins font-bold flex justify-center items-center mb-3">Add</Button>
           <Table 
             columns={columns} 
             dataSource={products} 

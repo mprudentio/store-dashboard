@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 const ProtectedRoute = (props) => {
+  const isAuthorize = window.localStorage.getItem("isLoggedin");
+  if (!isAuthorize) return <Navigate to="/login" />;
 
- const isAuthorize = window.localStorage.getItem("isLoggedin")
- if(!isAuthorize) return <Navigate to="/login"/>
+  return props.children;
+};
 
- return props.children
-}
-
-export default ProtectedRoute
-
+export default ProtectedRoute;

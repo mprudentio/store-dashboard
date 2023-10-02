@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+
 const initialState={
     loading: false,
     products:[],
@@ -7,9 +8,10 @@ const initialState={
 }
 
 //GET
-export const getProducts = createAsyncThunk("getProducts", async (_, { rejectWithValue }) => {
+export const getProducts = createAsyncThunk("getProducts", async (uid, { rejectWithValue }) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_KEY}/products`);
+        // console.log(uid)
+      const response = await fetch(`${import.meta.env.VITE_API_KEY}/products?uid=${uid}`);
       const result = await response.json();
       return result;
     } catch (error) {
